@@ -1,0 +1,9 @@
+models:
+  - name: churns
+    description: ""
+    # columns:
+    #   - name: id
+    #     description: ""
+    #     tests:
+    #       - unique
+    #       - not_null

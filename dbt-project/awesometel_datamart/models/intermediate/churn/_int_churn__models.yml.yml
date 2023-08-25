@@ -1,0 +1,5 @@
+# Create the DBT config for my models
+
+models:
+  - name: int_product_holdings_exploded_to_timeseries
+    description: ""

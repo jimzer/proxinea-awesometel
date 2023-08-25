@@ -1,0 +1,71 @@
+# Create the DBT config for my models
+
+models:
+  - name: inp_awesometel__accounts
+    description: ""
+    columns:
+      - name: account_id
+        data_type: BIGINT
+        description: "Unique identifier for each customer's account."
+      - name: language
+        data_type: TEXT
+        description: "Preferred language set by the customer."
+      - name: gender
+        data_type: TEXT
+        description: "Gender information of the customer."
+      - name: birthday
+        data_type: DATE
+        description: "Birth date of the customer."
+      - name: zip_code
+        data_type: TEXT
+        description: "Zip code or postal code related to the customer's location."
+      - name: payment_method
+        data_type: TEXT
+        description: "Selected method of payment by the customer."
+
+  - name: inp_awesometel__interactions
+    description: ""
+    columns:
+      - name: account_id
+        data_type: BIGINT
+        description: "Identifier linking to the customer's account."
+      - name: date
+        data_type: DATE
+        description: "Date when the interaction occurred."
+      - name: time_in_queue
+        data_type: BIGINT
+        description: "Time (in seconds) the customer spent waiting in the queue."
+      - name: handling_time_s
+        data_type: BIGINT
+        description: "Duration (in seconds) taken to handle the customer's concern."
+      - name: call_reason
+        data_type: TEXT
+        description: "Reason or purpose for the customer's call or interaction."
+      - name: customer_satisfaction_after_call
+        data_type: DOUBLE PRECISION
+        description: "Score or metric indicating the customer's satisfaction after the call or interaction."
+
+  - name: inp_awesometel__product_holdings
+    description: ""
+    columns:
+      - name: account_id
+        data_type: TEXT
+        description: "Identifier linking to the customer's account."
+      - name: subscription_id
+        data_type: TEXT
+        description: "Unique identifier for each product subscription."
+      - name: product_family
+        data_type: TEXT
+        description: "Broad category to which the product belongs."
+      - name: product_name
+        data_type: TEXT
+        description: "Specific name or title of the product or service."
+      - name: product_price
+        data_type: TEXT
+        description: "Price or cost associated with the product or service."
+      - name: valid_from
+        data_type: TEXT
+        description: "Date from which the product subscription is active or valid."
+      - name: valid_to
+        data_type: TEXT
+        description: "Date on which the product subscription will end or expire."

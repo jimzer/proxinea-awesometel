@@ -1,0 +1,30 @@
+[0m14:42:27.333849 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10652df90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10824c6a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10824d150>]}
+
+
+============================== 14:42:27.337807 | fd1dc0fd-5f8c-411c-9b83-a77eef30d990 ==============================
+[0m14:42:27.337807 [info ] [MainThread]: Running with dbt=1.6.0
+[0m14:42:27.338353 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/jimzer/.dbt', 'debug': 'False', 'fail_fast': 'False', 'log_path': 'logs', 'warn_error': 'None', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt init awesometel-datamart', 'introspect': 'True', 'log_format': 'default', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m14:42:27.338874 [warn ] [MainThread]: [ConfigFolderDirectory]: Unable to parse dict {'dir': PosixPath('/Users/jimzer/.dbt')}
+[0m14:42:27.339193 [info ] [MainThread]: Creating dbt configuration folder at 
+[0m14:42:39.008861 [error] [MainThread]: Encountered an error:
+
+[0m14:42:39.011563 [error] [MainThread]: Traceback (most recent call last):
+  File "/Users/jimzer/Library/Caches/pypoetry/virtualenvs/proxinea-1hT-04FQ-py3.10/lib/python3.10/site-packages/dbt/cli/requires.py", line 87, in wrapper
+    result, success = func(*args, **kwargs)
+  File "/Users/jimzer/Library/Caches/pypoetry/virtualenvs/proxinea-1hT-04FQ-py3.10/lib/python3.10/site-packages/dbt/cli/requires.py", line 72, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/jimzer/Library/Caches/pypoetry/virtualenvs/proxinea-1hT-04FQ-py3.10/lib/python3.10/site-packages/dbt/cli/main.py", line 467, in init
+    results = task.run()
+  File "/Users/jimzer/Library/Caches/pypoetry/virtualenvs/proxinea-1hT-04FQ-py3.10/lib/python3.10/site-packages/dbt/task/init.py", line 283, in run
+    project_name = self.get_valid_project_name()
+  File "/Users/jimzer/Library/Caches/pypoetry/virtualenvs/proxinea-1hT-04FQ-py3.10/lib/python3.10/site-packages/dbt/task/init.py", line 246, in get_valid_project_name
+    name = click.prompt("Enter a name for your project (letters, digits, underscore)")
+  File "/Users/jimzer/Library/Caches/pypoetry/virtualenvs/proxinea-1hT-04FQ-py3.10/lib/python3.10/site-packages/click/termui.py", line 164, in prompt
+    value = prompt_func(prompt)
+  File "/Users/jimzer/Library/Caches/pypoetry/virtualenvs/proxinea-1hT-04FQ-py3.10/lib/python3.10/site-packages/click/termui.py", line 147, in prompt_func
+    raise Abort() from None
+click.exceptions.Abort
+
+[0m14:42:39.013373 [debug] [MainThread]: Command `dbt init` failed at 14:42:39.013130 after 11.74 seconds
+[0m14:42:39.014148 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10652df90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10824d150>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10824da20>]}
+[0m14:42:39.014853 [debug] [MainThread]: Flushing usage events
