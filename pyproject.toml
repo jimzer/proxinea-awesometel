@@ -1,0 +1,29 @@
+[tool.poetry]
+name = "proxinea"
+version = "0.1.0"
+description = ""
+authors = ["jimzer <jimi.vaubien@protonmail.com>"]
+readme = "README.md"
+packages = [{include = "awesometel"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+pandas = "^2.0.3"
+sqlalchemy = "^2.0.20"
+psycopg2-binary = "^2.9.7"
+ipykernel = "^6.25.1"
+tabulate = "^0.9.0"
+dbt-postgres = "^1.6.0"
+matplotlib = "^3.7.2"
+seaborn = "^0.12.2"
+scikit-learn = "^1.3.0"
+
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.0.285"
+black = "^23.7.0"
+isort = "^5.12.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
